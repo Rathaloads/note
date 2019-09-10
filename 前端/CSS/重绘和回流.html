@@ -1,0 +1,853 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>重绘和回流 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="块级格式化上下文.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">算法与数据结构</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../Algorithm/sort.html">
+            
+                <a href="../../Algorithm/sort.html">
+            
+                    
+                    排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../Algorithm/基本数据结构.html">
+            
+                <a href="../../Algorithm/基本数据结构.html">
+            
+                    
+                    基本数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">设计模式</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../Design/">
+            
+                <a href="../../Design/">
+            
+                    
+                    预留
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">前端</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" >
+            
+                <span>
+            
+                    
+                    CSS
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="CSS的盒模型.html">
+            
+                <a href="CSS的盒模型.html">
+            
+                    
+                    CSS的盒模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="块级格式化上下文.html">
+            
+                <a href="块级格式化上下文.html">
+            
+                    
+                    块级格式化上下文
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.1.3" data-path="重绘和回流.html">
+            
+                <a href="重绘和回流.html">
+            
+                    
+                    重绘和回流
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" >
+            
+                <span>
+            
+                    
+                    JavaScript
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="../JavaScript/闭包.html">
+            
+                <a href="../JavaScript/闭包.html">
+            
+                    
+                    闭包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.2" data-path="../JavaScript/变量提升.html">
+            
+                <a href="../JavaScript/变量提升.html">
+            
+                    
+                    变量提升
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.3" data-path="../JavaScript/高阶函数.html">
+            
+                <a href="../JavaScript/高阶函数.html">
+            
+                    
+                    高阶函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.4" data-path="../JavaScript/原型链与继承.html">
+            
+                <a href="../JavaScript/原型链与继承.html">
+            
+                    
+                    原型链与继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.5" data-path="../JavaScript/ES6新特性.html">
+            
+                <a href="../JavaScript/ES6新特性.html">
+            
+                    
+                    ES6新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.6" data-path="../JavaScript/JavaScript事件循环机制.html">
+            
+                <a href="../JavaScript/JavaScript事件循环机制.html">
+            
+                    
+                    JavaScript事件循环机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.7" data-path="../JavaScript/bind、call、apply函数.html">
+            
+                <a href="../JavaScript/bind、call、apply函数.html">
+            
+                    
+                    bind、call、apply函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" >
+            
+                <span>
+            
+                    
+                    性能优化
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" >
+            
+                <span>
+            
+                    
+                    布局
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" >
+            
+                <span>
+            
+                    
+                    Vue
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.5.1" data-path="../Vue/待定.html">
+            
+                <a href="../Vue/待定.html">
+            
+                    
+                    待定...
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" >
+            
+                <span>
+            
+                    
+                    Webpack
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.6.1" data-path="../Webpack/待定.html">
+            
+                <a href="../Webpack/待定.html">
+            
+                    
+                    待定...
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">CSS样式收藏</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../css样式收藏/工具.html">
+            
+                <a href="../../css样式收藏/工具.html">
+            
+                    
+                    工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../../css样式收藏/清除默认样式.html">
+            
+                <a href="../../css样式收藏/清除默认样式.html">
+            
+                    
+                    清除默认样式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../../css样式收藏/滚动条样式.html">
+            
+                <a href="../../css样式收藏/滚动条样式.html">
+            
+                    
+                    滚动条样式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="../../css样式收藏/midea参考.html">
+            
+                <a href="../../css样式收藏/midea参考.html">
+            
+                    
+                    midea参考
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="../../css样式收藏/高度自动撑满.html">
+            
+                <a href="../../css样式收藏/高度自动撑满.html">
+            
+                    
+                    高度自动撑满
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" data-path="../../css样式收藏/垂直居中.html">
+            
+                <a href="../../css样式收藏/垂直居中.html">
+            
+                    
+                    垂直居中
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Vue</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../Vue/Vue相关知识点.html">
+            
+                <a href="../../Vue/Vue相关知识点.html">
+            
+                    
+                    Vue相关知识点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../../Vue/Webpack.html">
+            
+                <a href="../../Vue/Webpack.html">
+            
+                    
+                    Webpack
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">工作中遇到的问题汇总</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../../工作中遇到的问题汇总/">
+            
+                <a href="../../工作中遇到的问题汇总/">
+            
+                    
+                    问题汇总
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">计算机网络</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../../计算机网络/Cookie和Session.html">
+            
+                <a href="../../计算机网络/Cookie和Session.html">
+            
+                    
+                    Cookie和Session
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">文章收藏</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../../深度好文/链接地址.html">
+            
+                <a href="../../深度好文/链接地址.html">
+            
+                    
+                    收藏
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">面试</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../../面试/JavaScript基础.html">
+            
+                <a href="../../面试/JavaScript基础.html">
+            
+                    
+                    JavaScript基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >重绘和回流</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="css&#x7684;&#x91CD;&#x7ED8;&#x4E0E;&#x56DE;&#x6D41;">CSS&#x7684;&#x91CD;&#x7ED8;&#x4E0E;&#x56DE;&#x6D41;</h1>
+<blockquote>
+<p>&#x6D4F;&#x89C8;&#x5668;&#x52A0;&#x8F7D;&#x65F6;&#x505A;&#x4E86;&#x4EC0;&#x4E48;?</p>
+</blockquote>
+<p><img src="images/&#x6D4F;&#x89C8;&#x5668;&#x52A0;&#x8F7D;&#x8FC7;&#x7A0B;.png" alt="css&#x91CD;&#x7ED8;&#x4E0E;&#x56DE;&#x6D41;"></p>
+<p>  &#x5728;&#x9875;&#x9762;&#x52A0;&#x8F7D;&#x65F6;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x628A;&#x83B7;&#x53D6;&#x5230;&#x7684;HTML&#x4EE3;&#x7801;&#x89E3;&#x6790;&#x6210;1&#x4E2A;DOM&#x6811;&#xFF0C;DOM&#x6811;&#x91CC;&#x5305;&#x542B;&#x4E86;&#x6240;&#x6709;HTML&#x6807;&#x7B7E;&#xFF0C;&#x5305;&#x62EC;display:none&#x9690;&#x85CF;&#xFF0C;&#x8FD8;&#x6709;&#x7528;JS&#x52A8;&#x6001;&#x6DFB;&#x52A0;&#x7684;&#x5143;&#x7D20;&#x7B49;&#x3002;</p>
+<p>  &#x6D4F;&#x89C8;&#x5668;&#x628A;&#x6240;&#x6709;&#x6837;&#x5F0F;(&#x7528;&#x6237;&#x5B9A;&#x4E49;&#x7684;CSS&#x548C;&#x7528;&#x6237;&#x4EE3;&#x7406;)&#x89E3;&#x6790;&#x6210;&#x6837;&#x5F0F;&#x7ED3;&#x6784;&#x4F53;,DOM Tree &#x548C;&#x6837;&#x5F0F;&#x7ED3;&#x6784;&#x4F53;&#x7EC4;&#x5408;&#x540E;&#x6784;&#x5EFA;render tree,</p>
+<p>  render tree&#x7C7B;&#x4F3C;&#x4E8E;DOM tree&#xFF0C;&#x4F46;&#x533A;&#x522B;&#x5F88;&#x5927;&#xFF0C;&#x56E0;&#x4E3A;render tree&#x80FD;&#x8BC6;&#x522B;&#x6837;&#x5F0F;&#xFF0C;render tree&#x4E2D;&#x6BCF;&#x4E2A;NODE&#x90FD;&#x6709;&#x81EA;&#x5DF1;&#x7684;style&#xFF0C;&#x800C;&#x4E14;render tree&#x4E0D;&#x5305;&#x542B;&#x9690;&#x85CF;&#x7684;&#x8282;&#x70B9;(&#x6BD4;&#x5982;display:none&#x7684;&#x8282;&#x70B9;&#xFF0C;&#x8FD8;&#x6709;head&#x8282;&#x70B9;)&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x4E9B;&#x8282;&#x70B9;&#x4E0D;&#x4F1A;&#x7528;&#x4E8E;&#x5448;&#x73B0;&#xFF0C;&#x800C;&#x4E14;&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x5448;&#x73B0;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x5C31;&#x4E0D;&#x4F1A;&#x5305;&#x542B;&#x5230; render tree&#x4E2D;.</p>
+<p>  &#x901A;&#x4FD7;&#x7684;&#x8BF4;: </p>
+<ul>
+<li>&#x6D4F;&#x89C8;&#x5668;&#x91C7;&#x7528;&#x6D41;&#x5F0F;&#x5E03;&#x5C40;&#x6A21;&#x578B;&#xFF08;Flow Based Layout&#xFF09;</li>
+<li>&#x6D4F;&#x89C8;&#x5668;&#x4F1A;&#x628A;HTML&#x89E3;&#x6790;&#x6210;DOM&#xFF0C;&#x628A;CSS&#x89E3;&#x6790;&#x6210;CSSOM&#xFF0C;DOM&#x548C;CSSOM&#x5408;&#x5E76;&#x5C31;&#x4EA7;&#x751F;&#x4E86;&#x6E32;&#x67D3;&#x6811;&#xFF08;Render Tree&#xFF09;&#x3002;</li>
+<li>&#x6709;&#x4E86;RenderTree&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x77E5;&#x9053;&#x4E86;&#x6240;&#x6709;&#x8282;&#x70B9;&#x7684;&#x6837;&#x5F0F;&#xFF0C;&#x7136;&#x540E;&#x8BA1;&#x7B97;&#x4ED6;&#x4EEC;&#x5728;&#x9875;&#x9762;&#x4E0A;&#x7684;&#x5927;&#x5C0F;&#x548C;&#x4F4D;&#x7F6E;&#xFF0C;&#x6700;&#x540E;&#x628A;&#x8282;&#x70B9;&#x7ED8;&#x5236;&#x5230;&#x9875;&#x9762;&#x4E0A;&#x3002;</li>
+<li><p>&#x7531;&#x4E8E;&#x6D4F;&#x89C8;&#x5668;&#x4F7F;&#x7528;&#x6D41;&#x5F0F;&#x5E03;&#x5C40;&#xFF0C;&#x5BF9;Render Tree&#x7684;&#x8BA1;&#x7B97;&#x901A;&#x5E38;&#x53EA;&#x9700;&#x8981;&#x904D;&#x5386;&#x4E00;&#x6B21;&#x5C31;&#x53EF;&#x4EE5;&#x5B8C;&#x6210;&#xFF0C;<strong><em>&#x4F46;table&#x53CA;&#x5176;&#x5185;&#x90E8;&#x5143;&#x7D20;&#x9664;&#x5916;&#xFF0C;&#x4ED6;&#x4EEC;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x591A;&#x6B21;&#x8BA1;&#x7B97;&#xFF0C;&#x901A;&#x5E38;&#x8981;&#x82B1;3&#x500D;&#x4E8E;&#x540C;&#x7B49;&#x5143;&#x7D20;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x8FD9;&#x4E5F;&#x662F;&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x907F;&#x514D;&#x4F7F;&#x7528;table&#x5E03;&#x5C40;&#x7684;&#x539F;&#x56E0;&#x4E4B;&#x4E00;&#x3002;</em></strong></p>
+<p>&#x6E32;&#x67D3;&#x8FC7;&#x7A0B;:</p>
+</li>
+<li>&#x89E3;&#x6790;HTML&#xFF0C;&#x751F;&#x6210;DOM&#x6811;&#xFF0C;&#x89E3;&#x6790;CSS&#xFF0C;&#x751F;&#x6210;CSSOM&#x6811;</li>
+<li>&#x5C06;DOM&#x6811;&#x548C;CSSOM&#x6811;&#x7ED3;&#x5408;&#xFF0C;&#x751F;&#x6210;&#x6E32;&#x67D3;&#x6811;(Render Tree)</li>
+<li>Layout(&#x56DE;&#x6D41;):&#x6839;&#x636E;&#x751F;&#x6210;&#x7684;&#x6E32;&#x67D3;&#x6811;&#xFF0C;&#x8FDB;&#x884C;&#x56DE;&#x6D41;(Layout)&#xFF0C;&#x5F97;&#x5230;&#x8282;&#x70B9;&#x7684;&#x51E0;&#x4F55;&#x4FE1;&#x606F;&#xFF08;&#x4F4D;&#x7F6E;&#xFF0C;&#x5927;&#x5C0F;&#xFF09;</li>
+<li>Painting(&#x91CD;&#x7ED8;):&#x6839;&#x636E;&#x6E32;&#x67D3;&#x6811;&#x4EE5;&#x53CA;&#x56DE;&#x6D41;&#x5F97;&#x5230;&#x7684;&#x51E0;&#x4F55;&#x4FE1;&#x606F;&#xFF0C;&#x5F97;&#x5230;&#x8282;&#x70B9;&#x7684;&#x7EDD;&#x5BF9;&#x50CF;&#x7D20;</li>
+<li>Display:&#x5C06;&#x50CF;&#x7D20;&#x53D1;&#x9001;&#x7ED9;GPU&#xFF0C;&#x5C55;&#x793A;&#x5728;&#x9875;&#x9762;&#x4E0A;</li>
+</ul>
+<blockquote>
+<p>&#x91CD;&#x7ED8;:</p>
+</blockquote>
+<p>  &#x5F53;render tree&#x4E2D;&#x7684;&#x4E00;&#x4E9B;&#x5143;&#x7D20;&#x9700;&#x8981;&#x66F4;&#x65B0;&#x5C5E;&#x6027;&#xFF0C;&#x800C;&#x8FD9;&#x4E9B;&#x5C5E;&#x6027;&#x53EA;&#x662F;&#x5F71;&#x54CD;&#x5143;&#x7D20;&#x7684;&#x5916;&#x89C2;&#xFF0C;&#x98CE;&#x683C;&#xFF0C;&#x800C;&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x5E03;&#x5C40;&#x7684;&#xFF0C;&#x6BD4;&#x5982;background-color&#x3002;&#x5219;&#x5C31;&#x53EB;&#x79F0;&#x4E3A;&#x91CD;&#x7ED8;&#x3002;</p>
+<p>  &#x7531;&#x4E8E;&#x8282;&#x70B9;&#x7684;&#x51E0;&#x4F55;&#x5C5E;&#x6027;&#x53D1;&#x751F;&#x6539;&#x53D8;&#x6216;&#x8005;&#x7531;&#x4E8E;&#x6837;&#x5F0F;&#x53D1;&#x751F;&#x6539;&#x53D8;&#x800C;&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x5E03;&#x5C40;&#x7684;&#xFF0C;&#x79F0;&#x4E3A;&#x91CD;&#x7ED8;&#xFF0C;&#x4F8B;&#x5982;outline, visibility, color&#x3001;background-color&#x7B49;&#xFF0C;&#x91CD;&#x7ED8;&#x7684;&#x4EE3;&#x4EF7;&#x662F;&#x9AD8;&#x6602;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x6D4F;&#x89C8;&#x5668;&#x5FC5;&#x987B;&#x9A8C;&#x8BC1;DOM&#x6811;&#x4E0A;&#x5176;&#x4ED6;&#x8282;&#x70B9;&#x5143;&#x7D20;&#x7684;&#x53EF;&#x89C1;&#x6027;&#x3002;</p>
+<blockquote>
+<p>&#x56DE;&#x6D41;:</p>
+</blockquote>
+<p>  &#x5F53;render tree&#x4E2D;&#x7684;&#x4E00;&#x90E8;&#x5206;(&#x6216;&#x5168;&#x90E8;)&#x56E0;&#x4E3A;&#x5143;&#x7D20;&#x7684;&#x89C4;&#x6A21;&#x5C3A;&#x5BF8;&#xFF0C;&#x5E03;&#x5C40;&#xFF0C;&#x9690;&#x85CF;&#x7B49;&#x6539;&#x53D8;&#x800C;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x6784;&#x5EFA;&#x3002;&#x8FD9;&#x5C31;&#x79F0;&#x4E3A;&#x56DE;&#x6D41;(reflow)&#xFF0C;&#x5F53;&#x9875;&#x9762;&#x5E03;&#x5C40;&#x548C;&#x51E0;&#x4F55;&#x5C5E;&#x6027;&#x6539;&#x53D8;&#x65F6;&#x5C31;&#x9700;&#x8981;&#x56DE;&#x6D41;</p>
+<p>  &#x56DE;&#x6D41;&#x662F;&#x5E03;&#x5C40;&#x6216;&#x8005;&#x51E0;&#x4F55;&#x5C5E;&#x6027;&#x9700;&#x8981;&#x6539;&#x53D8;&#x5C31;&#x79F0;&#x4E3A;&#x56DE;&#x6D41;&#x3002;&#x56DE;&#x6D41;&#x662F;&#x5F71;&#x54CD;&#x6D4F;&#x89C8;&#x5668;&#x6027;&#x80FD;&#x7684;&#x5173;&#x952E;&#x56E0;&#x7D20;&#xFF0C;&#x56E0;&#x4E3A;&#x5176;&#x53D8;&#x5316;&#x6D89;&#x53CA;&#x5230;&#x90E8;&#x5206;&#x9875;&#x9762;&#xFF08;&#x6216;&#x662F;&#x6574;&#x4E2A;&#x9875;&#x9762;&#xFF09;&#x7684;&#x5E03;&#x5C40;&#x66F4;&#x65B0;&#x3002;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x56DE;&#x6D41;&#x53EF;&#x80FD;&#x4F1A;&#x5BFC;&#x81F4;&#x4E86;&#x5176;&#x6240;&#x6709;&#x5B50;&#x5143;&#x7D20;&#x4EE5;&#x53CA;DOM&#x4E2D;&#x7D27;&#x968F;&#x5176;&#x540E;&#x7684;&#x8282;&#x70B9;&#x3001;&#x7956;&#x5148;&#x8282;&#x70B9;&#x5143;&#x7D20;&#x7684;&#x968F;&#x540E;&#x7684;&#x56DE;&#x6D41;&#x3002;</p>
+<pre><code class="lang-html">  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;error&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h4</span>&gt;</span>&#x6211;&#x7684;&#x7EC4;&#x4EF6;<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>&#x9519;&#x8BEF;&#xFF1A;<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>&#x9519;&#x8BEF;&#x7684;&#x63CF;&#x8FF0;&#x2026;<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h5</span>&gt;</span>&#x9519;&#x8BEF;&#x7EA0;&#x6B63;<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ol</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>&#x7B2C;&#x4E00;&#x6B65;<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>&#x7B2C;&#x4E8C;&#x6B65;<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+</code></pre>
+<pre><code>&#x5728;&#x4E0A;&#x9762;&#x7684;HTML&#x7247;&#x6BB5;&#x4E2D;&#xFF0C;&#x5BF9;&#x8BE5;&#x6BB5;&#x843D;(&lt;p&gt;&#x6807;&#x7B7E;)&#x56DE;&#x6D41;&#x5C06;&#x4F1A;&#x5F15;&#x53D1;&#x5F3A;&#x70C8;&#x7684;&#x56DE;&#x6D41;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x662F;&#x4E00;&#x4E2A;&#x5B50;&#x8282;&#x70B9;&#x3002;
+&#x8FD9;&#x4E5F;&#x5BFC;&#x81F4;&#x4E86;&#x7956;&#x5148;&#x7684;&#x56DE;&#x6D41;&#xFF08;div.error&#x548C;body &#x2013; &#x89C6;&#x6D4F;&#x89C8;&#x5668;&#x800C;&#x5B9A;&#xFF09;&#x3002;
+&#x6B64;&#x5916;&#xFF0C;&lt;h5&gt;&#x548C;&lt;ol&gt;&#x4E5F;&#x4F1A;&#x6709;&#x7B80;&#x5355;&#x7684;&#x56DE;&#x6D41;&#xFF0C;&#x56E0;&#x4E3A;&#x5176;&#x5728;DOM&#x4E2D;&#x5728;&#x56DE;&#x6D41;&#x5143;&#x7D20;&#x4E4B;&#x540E;&#x3002;
+&#x5927;&#x90E8;&#x5206;&#x7684;&#x56DE;&#x6D41;&#x5C06;&#x5BFC;&#x81F4;&#x9875;&#x9762;&#x7684;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#x3002;
+</code></pre><blockquote>
+<p>&#x56DE;&#x6D41;&#x548C;&#x91CD;&#x7ED8;&#x7684;&#x5173;&#x7CFB;:</p>
+</blockquote>
+<ul>
+<li>&#x56DE;&#x6D41;&#x5FC5;&#x5C06;&#x5F15;&#x8D77;&#x91CD;&#x7ED8;</li>
+<li><p>&#x800C;&#x91CD;&#x7ED8;&#x4E0D;&#x4E00;&#x5B9A;&#x4F1A;&#x5F15;&#x8D77;&#x56DE;&#x6D41;</p>
+<p><strong><em>&#x56DE;&#x6D41;&#x5FC5;&#x5B9A;&#x4F1A;&#x53D1;&#x751F;&#x91CD;&#x7ED8;&#xFF0C;&#x91CD;&#x7ED8;&#x4E0D;&#x4E00;&#x5B9A;&#x4F1A;&#x5F15;&#x53D1;&#x56DE;&#x6D41;&#x3002;</em></strong></p>
+</li>
+</ul>
+<blockquote>
+<p> &#x6D4F;&#x89C8;&#x5668;&#x4F18;&#x5316;</p>
+</blockquote>
+<p>&#x73B0;&#x4EE3;&#x6D4F;&#x89C8;&#x5668;&#x5927;&#x591A;&#x90FD;&#x662F;&#x901A;&#x8FC7;&#x961F;&#x5217;&#x673A;&#x5236;&#x6765;&#x6279;&#x91CF;&#x66F4;&#x65B0;&#x5E03;&#x5C40;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x4F1A;&#x628A;&#x4FEE;&#x6539;&#x64CD;&#x4F5C;&#x653E;&#x5728;&#x961F;&#x5217;&#x4E2D;&#xFF0C;&#x81F3;&#x5C11;&#x4E00;&#x4E2A;&#x6D4F;&#x89C8;&#x5668;&#x5237;&#x65B0;&#xFF08;&#x5373;16.6ms&#xFF09;&#x624D;&#x4F1A;&#x6E05;&#x7A7A;&#x961F;&#x5217;&#xFF0C;&#x4F46;&#x5F53;&#x4F60;<strong>&#x83B7;&#x53D6;&#x5E03;&#x5C40;&#x4FE1;&#x606F;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x961F;&#x5217;&#x4E2D;&#x53EF;&#x80FD;&#x6709;&#x4F1A;&#x5F71;&#x54CD;&#x8FD9;&#x4E9B;&#x5C5E;&#x6027;&#x6216;&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x503C;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x5373;&#x4F7F;&#x6CA1;&#x6709;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x4E5F;&#x4F1A;&#x5F3A;&#x5236;&#x6E05;&#x7A7A;&#x961F;&#x5217;&#xFF0C;&#x89E6;&#x53D1;&#x56DE;&#x6D41;&#x4E0E;&#x91CD;&#x7ED8;&#x6765;&#x786E;&#x4FDD;&#x8FD4;&#x56DE;&#x6B63;&#x786E;&#x7684;&#x503C;&#x3002;</strong></p>
+<p>&#x4E3B;&#x8981;&#x5305;&#x62EC;&#x4EE5;&#x4E0B;&#x5C5E;&#x6027;&#x6216;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<ul>
+<li>offsetTop&#x3001;offsetLeft&#x3001;offsetWidth&#x3001;offsetHeight</li>
+<li>scrollTop&#x3001;scrollLeft&#x3001;scrollWidth&#x3001;scrollHeight</li>
+<li>clientTop&#x3001;clientLeft&#x3001;clientWidth&#x3001;clientHeight</li>
+<li>width&#x3001;height</li>
+<li>getComputedStyle()</li>
+<li>getBoundingClientRect()</li>
+</ul>
+<p>&#x6240;&#x4EE5;&#xFF0C;&#x6211;&#x4EEC;&#x5E94;&#x8BE5;&#x907F;&#x514D;&#x9891;&#x7E41;&#x7684;&#x4F7F;&#x7528;&#x4E0A;&#x8FF0;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x4ED6;&#x4EEC;&#x90FD;&#x4F1A;&#x5F3A;&#x5236;&#x6E32;&#x67D3;&#x5237;&#x65B0;&#x961F;&#x5217;&#x3002;</p>
+<blockquote>
+<p>&#x51CF;&#x5C11;&#x91CD;&#x7ED8;&#x4E0E;&#x56DE;&#x6D41;</p>
+</blockquote>
+<p>1.CSS</p>
+<ul>
+<li><strong>&#x4F7F;&#x7528; transform &#x66FF;&#x4EE3; top</strong></li>
+<li><strong>&#x4F7F;&#x7528; visibility &#x66FF;&#x6362; display: none</strong> &#xFF0C;&#x56E0;&#x4E3A;&#x524D;&#x8005;&#x53EA;&#x4F1A;&#x5F15;&#x8D77;&#x91CD;&#x7ED8;&#xFF0C;&#x540E;&#x8005;&#x4F1A;&#x5F15;&#x53D1;&#x56DE;&#x6D41;&#xFF08;&#x6539;&#x53D8;&#x4E86;&#x5E03;&#x5C40;)</li>
+<li><strong>&#x907F;&#x514D;&#x4F7F;&#x7528;table&#x5E03;&#x5C40;</strong>&#xFF0C;&#x53EF;&#x80FD;&#x5F88;&#x5C0F;&#x7684;&#x4E00;&#x4E2A;&#x5C0F;&#x6539;&#x52A8;&#x4F1A;&#x9020;&#x6210;&#x6574;&#x4E2A; table &#x7684;&#x91CD;&#x65B0;&#x5E03;&#x5C40;&#x3002;</li>
+<li><strong>&#x5C3D;&#x53EF;&#x80FD;&#x5728;DOM&#x6811;&#x7684;&#x6700;&#x672B;&#x7AEF;&#x6539;&#x53D8;class</strong>&#xFF0C;&#x56DE;&#x6D41;&#x662F;&#x4E0D;&#x53EF;&#x907F;&#x514D;&#x7684;&#xFF0C;&#x4F46;&#x53EF;&#x4EE5;&#x51CF;&#x5C11;&#x5176;&#x5F71;&#x54CD;&#x3002;&#x5C3D;&#x53EF;&#x80FD;&#x5728;DOM&#x6811;&#x7684;&#x6700;&#x672B;&#x7AEF;&#x6539;&#x53D8;class&#xFF0C;&#x53EF;&#x4EE5;&#x9650;&#x5236;&#x4E86;&#x56DE;&#x6D41;&#x7684;&#x8303;&#x56F4;&#xFF0C;&#x4F7F;&#x5176;&#x5F71;&#x54CD;&#x5C3D;&#x53EF;&#x80FD;&#x5C11;&#x7684;&#x8282;&#x70B9;&#x3002;</li>
+<li><p><strong>&#x907F;&#x514D;&#x8BBE;&#x7F6E;&#x591A;&#x5C42;&#x5185;&#x8054;&#x6837;&#x5F0F;</strong>&#xFF0C;CSS &#x9009;&#x62E9;&#x7B26;<strong>&#x4ECE;&#x53F3;&#x5F80;&#x5DE6;</strong>&#x5339;&#x914D;&#x67E5;&#x627E;&#xFF0C;&#x907F;&#x514D;&#x8282;&#x70B9;&#x5C42;&#x7EA7;&#x8FC7;&#x591A;&#x3002;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+<span class="hljs-selector-tag">span</span> {
+  <span class="hljs-attribute">color</span>: red;
+}
+<span class="hljs-selector-tag">div</span> &gt; <span class="hljs-selector-tag">a</span> &gt; <span class="hljs-selector-tag">span</span> {
+  <span class="hljs-attribute">color</span>: red;
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+</code></pre>
+<p>&#x5BF9;&#x4E8E;&#x7B2C;&#x4E00;&#x79CD;&#x8BBE;&#x7F6E;&#x6837;&#x5F0F;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x8BF4;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x53EA;&#x9700;&#x8981;&#x627E;&#x5230;&#x9875;&#x9762;&#x4E2D;&#x6240;&#x6709;&#x7684; span &#x6807;&#x7B7E;&#x7136;&#x540E;&#x8BBE;&#x7F6E;&#x989C;&#x8272;&#xFF0C;&#x4F46;&#x662F;&#x5BF9;&#x4E8E;&#x7B2C;&#x4E8C;&#x79CD;&#x8BBE;&#x7F6E;&#x6837;&#x5F0F;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x8BF4;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x9996;&#x5148;&#x9700;&#x8981;&#x627E;&#x5230;&#x6240;&#x6709;&#x7684; span &#x6807;&#x7B7E;&#xFF0C;&#x7136;&#x540E;&#x627E;&#x5230; span &#x6807;&#x7B7E;&#x4E0A;&#x7684; a &#x6807;&#x7B7E;&#xFF0C;&#x6700;&#x540E;&#x518D;&#x53BB;&#x627E;&#x5230; div &#x6807;&#x7B7E;&#xFF0C;&#x7136;&#x540E;&#x7ED9;&#x7B26;&#x5408;&#x8FD9;&#x79CD;&#x6761;&#x4EF6;&#x7684; span &#x6807;&#x7B7E;&#x8BBE;&#x7F6E;&#x989C;&#x8272;&#xFF0C;&#x8FD9;&#x6837;&#x7684;&#x9012;&#x5F52;&#x8FC7;&#x7A0B;&#x5C31;&#x5F88;&#x590D;&#x6742;&#x3002;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x5E94;&#x8BE5;&#x5C3D;&#x53EF;&#x80FD;&#x7684;&#x907F;&#x514D;&#x5199;&#x8FC7;&#x4E8E;&#x5177;&#x4F53;&#x7684; CSS &#x9009;&#x62E9;&#x5668;&#xFF0C;&#x7136;&#x540E;&#x5BF9;&#x4E8E; HTML &#x6765;&#x8BF4;&#x4E5F;&#x5C3D;&#x91CF;&#x5C11;&#x7684;&#x6DFB;&#x52A0;&#x65E0;&#x610F;&#x4E49;&#x6807;&#x7B7E;&#xFF0C;&#x4FDD;&#x8BC1;&#x5C42;&#x7EA7;&#x6241;&#x5E73;&#x3002;</p>
+</li>
+<li><p><strong>&#x5C06;&#x52A8;&#x753B;&#x6548;&#x679C;&#x5E94;&#x7528;&#x5230;position&#x5C5E;&#x6027;&#x4E3A;absolute&#x6216;fixed&#x7684;&#x5143;&#x7D20;&#x4E0A;</strong>&#xFF0C;&#x907F;&#x514D;&#x5F71;&#x54CD;&#x5176;&#x4ED6;&#x5143;&#x7D20;&#x7684;&#x5E03;&#x5C40;&#xFF0C;&#x8FD9;&#x6837;&#x53EA;&#x662F;&#x4E00;&#x4E2A;&#x91CD;&#x7ED8;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x56DE;&#x6D41;&#xFF0C;&#x540C;&#x65F6;&#xFF0C;&#x63A7;&#x5236;&#x52A8;&#x753B;&#x901F;&#x5EA6;&#x53EF;&#x4EE5;&#x9009;&#x62E9; requestAnimationFrame&#xFF0C;&#x8BE6;&#x89C1;&#x63A2;&#x8BA8; requestAnimationFrame&#x3002;</p>
+</li>
+<li><strong>&#x907F;&#x514D;&#x4F7F;&#x7528;CSS&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x5F15;&#x53D1;&#x56DE;&#x6D41;&#x3002;</strong></li>
+<li><strong>&#x5C06;&#x9891;&#x7E41;&#x91CD;&#x7ED8;&#x6216;&#x8005;&#x56DE;&#x6D41;&#x7684;&#x8282;&#x70B9;&#x8BBE;&#x7F6E;&#x4E3A;&#x56FE;&#x5C42;</strong>&#xFF0C;&#x56FE;&#x5C42;&#x80FD;&#x591F;&#x963B;&#x6B62;&#x8BE5;&#x8282;&#x70B9;&#x7684;&#x6E32;&#x67D3;&#x884C;&#x4E3A;&#x5F71;&#x54CD;&#x522B;&#x7684;&#x8282;&#x70B9;&#xFF0C;&#x4F8B;&#x5982;will-change&#x3001;video&#x3001;iframe&#x7B49;&#x6807;&#x7B7E;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x4F1A;&#x81EA;&#x52A8;&#x5C06;&#x8BE5;&#x8282;&#x70B9;&#x53D8;&#x4E3A;&#x56FE;&#x5C42;&#x3002;</li>
+<li><strong>CSS3 &#x786C;&#x4EF6;&#x52A0;&#x901F;&#xFF08;GPU&#x52A0;&#x901F;&#xFF09;</strong>&#xFF0C;&#x4F7F;&#x7528;css3&#x786C;&#x4EF6;&#x52A0;&#x901F;&#xFF0C;&#x53EF;&#x4EE5;&#x8BA9;transform&#x3001;opacity&#x3001;filters&#x8FD9;&#x4E9B;&#x52A8;&#x753B;&#x4E0D;&#x4F1A;&#x5F15;&#x8D77;&#x56DE;&#x6D41;&#x91CD;&#x7ED8; &#x3002;&#x4F46;&#x662F;&#x5BF9;&#x4E8E;&#x52A8;&#x753B;&#x7684;&#x5176;&#x5B83;&#x5C5E;&#x6027;&#xFF0C;&#x6BD4;&#x5982;background-color&#x8FD9;&#x4E9B;&#xFF0C;&#x8FD8;&#x662F;&#x4F1A;&#x5F15;&#x8D77;&#x56DE;&#x6D41;&#x91CD;&#x7ED8;&#x7684;&#xFF0C;&#x4E0D;&#x8FC7;&#x5B83;&#x8FD8;&#x662F;&#x53EF;&#x4EE5;&#x63D0;&#x5347;&#x8FD9;&#x4E9B;&#x52A8;&#x753B;&#x7684;&#x6027;&#x80FD;&#x3002;</li>
+</ul>
+<blockquote>
+<p>JavaScript</p>
+</blockquote>
+<ul>
+<li><strong>&#x907F;&#x514D;&#x9891;&#x7E41;&#x64CD;&#x4F5C;&#x6837;&#x5F0F;</strong>&#xFF0C;&#x6700;&#x597D;&#x4E00;&#x6B21;&#x6027;&#x91CD;&#x5199;style&#x5C5E;&#x6027;&#xFF0C;&#x6216;&#x8005;&#x5C06;&#x6837;&#x5F0F;&#x5217;&#x8868;&#x5B9A;&#x4E49;&#x4E3A;class&#x5E76;&#x4E00;&#x6B21;&#x6027;&#x66F4;&#x6539;class&#x5C5E;&#x6027;&#x3002;</li>
+<li><strong>&#x907F;&#x514D;&#x9891;&#x7E41;&#x64CD;&#x4F5C;DOM</strong>&#xFF0C;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;documentFragment&#xFF0C;&#x5728;&#x5B83;&#x4E0A;&#x9762;&#x5E94;&#x7528;&#x6240;&#x6709;DOM&#x64CD;&#x4F5C;&#xFF0C;&#x6700;&#x540E;&#x518D;&#x628A;&#x5B83;&#x6DFB;&#x52A0;&#x5230;&#x6587;&#x6863;&#x4E2D;&#x3002;</li>
+<li><strong>&#x907F;&#x514D;&#x9891;&#x7E41;&#x8BFB;&#x53D6;&#x4F1A;&#x5F15;&#x53D1;&#x56DE;&#x6D41;/&#x91CD;&#x7ED8;&#x7684;&#x5C5E;&#x6027;</strong>&#xFF0C;&#x5982;&#x679C;&#x786E;&#x5B9E;&#x9700;&#x8981;&#x591A;&#x6B21;&#x4F7F;&#x7528;&#xFF0C;&#x5C31;&#x7528;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x7F13;&#x5B58;&#x8D77;&#x6765;&#x3002;</li>
+<li><strong>&#x5BF9;&#x5177;&#x6709;&#x590D;&#x6742;&#x52A8;&#x753B;&#x7684;&#x5143;&#x7D20;&#x4F7F;&#x7528;&#x7EDD;&#x5BF9;&#x5B9A;&#x4F4D;</strong>&#xFF0C;&#x4F7F;&#x5B83;&#x8131;&#x79BB;&#x6587;&#x6863;&#x6D41;&#xFF0C;&#x5426;&#x5219;&#x4F1A;&#x5F15;&#x8D77;&#x7236;&#x5143;&#x7D20;&#x53CA;&#x540E;&#x7EED;&#x5143;&#x7D20;&#x9891;&#x7E41;&#x56DE;&#x6D41;&#x3002;</li>
+</ul>
+<blockquote>
+<p>&#x5177;&#x4F53;&#x7406;&#x89E3;</p>
+</blockquote>
+<p><a href="https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/24" target="_blank">&#x4ECB;&#x7ECD;&#x4E0B;&#x91CD;&#x7ED8;&#x548C;&#x56DE;&#x6D41;&#xFF08;Repaint &amp; Reflow&#xFF09;&#xFF0C;&#x4EE5;&#x53CA;&#x5982;&#x4F55;&#x8FDB;&#x884C;&#x4F18;&#x5316;</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="块级格式化上下文.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 块级格式化上下文">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"重绘和回流","level":"4.1.3","depth":2,"next":{"title":"JavaScript","level":"4.2","depth":1,"ref":"","articles":[{"title":"闭包","level":"4.2.1","depth":2,"path":"前端/JavaScript/闭包.md","ref":"前端/JavaScript/闭包.md","articles":[]},{"title":"变量提升","level":"4.2.2","depth":2,"path":"前端/JavaScript/变量提升.md","ref":"前端/JavaScript/变量提升.md","articles":[]},{"title":"高阶函数","level":"4.2.3","depth":2,"path":"前端/JavaScript/高阶函数.md","ref":"前端/JavaScript/高阶函数.md","articles":[]},{"title":"原型链与继承","level":"4.2.4","depth":2,"path":"前端/JavaScript/原型链与继承.md","ref":"前端/JavaScript/原型链与继承.md","articles":[]},{"title":"ES6新特性","level":"4.2.5","depth":2,"path":"前端/JavaScript/ES6新特性.md","ref":"前端/JavaScript/ES6新特性.md","articles":[]},{"title":"JavaScript事件循环机制","level":"4.2.6","depth":2,"path":"前端/JavaScript/JavaScript事件循环机制.md","ref":"前端/JavaScript/JavaScript事件循环机制.md","articles":[]},{"title":"bind、call、apply函数","level":"4.2.7","depth":2,"path":"前端/JavaScript/bind、call、apply函数.md","ref":"前端/JavaScript/bind、call、apply函数.md","articles":[]}]},"previous":{"title":"块级格式化上下文","level":"4.1.2","depth":2,"path":"前端/CSS/块级格式化上下文.md","ref":"前端/CSS/块级格式化上下文.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"前端/CSS/重绘和回流.md","mtime":"2019-09-10T01:37:23.819Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-10T04:49:22.501Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

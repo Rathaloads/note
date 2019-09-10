@@ -1,0 +1,774 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>CSS的盒模型 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="块级格式化上下文.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">算法与数据结构</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../Algorithm/sort.html">
+            
+                <a href="../../Algorithm/sort.html">
+            
+                    
+                    排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../Algorithm/基本数据结构.html">
+            
+                <a href="../../Algorithm/基本数据结构.html">
+            
+                    
+                    基本数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">设计模式</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../Design/">
+            
+                <a href="../../Design/">
+            
+                    
+                    预留
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">前端</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" >
+            
+                <span>
+            
+                    
+                    CSS
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="4.1.1" data-path="CSS的盒模型.html">
+            
+                <a href="CSS的盒模型.html">
+            
+                    
+                    CSS的盒模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="块级格式化上下文.html">
+            
+                <a href="块级格式化上下文.html">
+            
+                    
+                    块级格式化上下文
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="重绘和回流.html">
+            
+                <a href="重绘和回流.html">
+            
+                    
+                    重绘和回流
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" >
+            
+                <span>
+            
+                    
+                    JavaScript
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="../JavaScript/闭包.html">
+            
+                <a href="../JavaScript/闭包.html">
+            
+                    
+                    闭包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.2" data-path="../JavaScript/变量提升.html">
+            
+                <a href="../JavaScript/变量提升.html">
+            
+                    
+                    变量提升
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.3" data-path="../JavaScript/高阶函数.html">
+            
+                <a href="../JavaScript/高阶函数.html">
+            
+                    
+                    高阶函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.4" data-path="../JavaScript/原型链与继承.html">
+            
+                <a href="../JavaScript/原型链与继承.html">
+            
+                    
+                    原型链与继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.5" data-path="../JavaScript/ES6新特性.html">
+            
+                <a href="../JavaScript/ES6新特性.html">
+            
+                    
+                    ES6新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.6" data-path="../JavaScript/JavaScript事件循环机制.html">
+            
+                <a href="../JavaScript/JavaScript事件循环机制.html">
+            
+                    
+                    JavaScript事件循环机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.7" data-path="../JavaScript/bind、call、apply函数.html">
+            
+                <a href="../JavaScript/bind、call、apply函数.html">
+            
+                    
+                    bind、call、apply函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" >
+            
+                <span>
+            
+                    
+                    性能优化
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" >
+            
+                <span>
+            
+                    
+                    布局
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" >
+            
+                <span>
+            
+                    
+                    Vue
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.5.1" data-path="../Vue/待定.html">
+            
+                <a href="../Vue/待定.html">
+            
+                    
+                    待定...
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" >
+            
+                <span>
+            
+                    
+                    Webpack
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.6.1" data-path="../Webpack/待定.html">
+            
+                <a href="../Webpack/待定.html">
+            
+                    
+                    待定...
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">CSS样式收藏</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../css样式收藏/工具.html">
+            
+                <a href="../../css样式收藏/工具.html">
+            
+                    
+                    工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../../css样式收藏/清除默认样式.html">
+            
+                <a href="../../css样式收藏/清除默认样式.html">
+            
+                    
+                    清除默认样式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../../css样式收藏/滚动条样式.html">
+            
+                <a href="../../css样式收藏/滚动条样式.html">
+            
+                    
+                    滚动条样式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="../../css样式收藏/midea参考.html">
+            
+                <a href="../../css样式收藏/midea参考.html">
+            
+                    
+                    midea参考
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="../../css样式收藏/高度自动撑满.html">
+            
+                <a href="../../css样式收藏/高度自动撑满.html">
+            
+                    
+                    高度自动撑满
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" data-path="../../css样式收藏/垂直居中.html">
+            
+                <a href="../../css样式收藏/垂直居中.html">
+            
+                    
+                    垂直居中
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Vue</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../Vue/Vue相关知识点.html">
+            
+                <a href="../../Vue/Vue相关知识点.html">
+            
+                    
+                    Vue相关知识点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../../Vue/Webpack.html">
+            
+                <a href="../../Vue/Webpack.html">
+            
+                    
+                    Webpack
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">工作中遇到的问题汇总</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../../工作中遇到的问题汇总/">
+            
+                <a href="../../工作中遇到的问题汇总/">
+            
+                    
+                    问题汇总
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">计算机网络</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../../计算机网络/Cookie和Session.html">
+            
+                <a href="../../计算机网络/Cookie和Session.html">
+            
+                    
+                    Cookie和Session
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">文章收藏</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../../深度好文/链接地址.html">
+            
+                <a href="../../深度好文/链接地址.html">
+            
+                    
+                    收藏
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">面试</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../../面试/JavaScript基础.html">
+            
+                <a href="../../面试/JavaScript基础.html">
+            
+                    
+                    JavaScript基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >CSS的盒模型</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="css&#x7684;&#x76D2;&#x6A21;&#x578B;">CSS&#x7684;&#x76D2;&#x6A21;&#x578B;</h1>
+<p>&#x5728;CSS&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x8BA4;&#x4E3A;&#x6BCF;&#x4E00;&#x4E2A;HTML&#x6807;&#x7B7E;&#x90FD;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x65B9;&#x5757;&#x3002;&#x7136;&#x540E;&#x8FD9;&#x4E2A;&#x65B9;&#x5757;&#x53C8;&#x5305;&#x542B;&#x7740;&#x4E00;&#x4E2A;&#x4E00;&#x4E2A;&#x7684;&#x5C0F;&#x65B9;&#x5757;&#xFF0C;&#x5982;&#x540C;&#x76D2;&#x5B50;&#x4E00;&#x822C;&#x4E00;&#x5C42;&#x4E00;&#x5C42;&#x7684;&#x5305;&#x88F9;&#x7740;&#x3002;&#x8FD9;&#x5C31;&#x662F;&#x76D2;&#x6A21;&#x578B;&#x3002;</p>
+<p>&#x5728;CSS&#x4E2D;&#xFF0C;&#x76D2;&#x6A21;&#x578B;&#x6709;&#x4E24;&#x79CD;&#xFF1A;</p>
+<ul>
+<li><p>W3C&#x6807;&#x51C6;&#x76D2;&#x6A21;&#x578B;(content-box)</p>
+</li>
+<li><p>IE&#x76D2;&#x6A21;&#x578B;(border-box)</p>
+</li>
+</ul>
+<blockquote>
+<p>W3C&#x6807;&#x51C6;&#x76D2;&#x6A21;&#x578B;</p>
+</blockquote>
+<p>W3C&#x6807;&#x51C6;&#x76D2;&#x6A21;&#x578B;:</p>
+<pre><code>&#x76D2;&#x5B50;&#x7684;&#x5BBD;&#x5EA6; = &#x5185;&#x5BB9;&#x5BBD;&#x5EA6;
+
+&#x76D2;&#x5B50;&#x7684;&#x9AD8;&#x5EA6; = &#x5185;&#x5BB9;&#x9AD8;&#x5EA6;
+</code></pre><p>&#x5982;&#x56FE;&#x6240;&#x793A;:</p>
+<p><img src="images/&#x76D2;&#x6A21;&#x578B;1.png" alt="W3C&#x6807;&#x51C6;&#x76D2;&#x6A21;&#x578B;"></p>
+<p>&#x5185;&#x5BB9;&#x7684;&#x5BBD;&#x5EA6;&#x548C;&#x9AD8;&#x5EA6;&#x59CB;&#x7EC8;&#x662F;&#x76D2;&#x5B50;&#x7684;&#x5BBD;&#x5EA6;&#x548C;&#x9AD8;&#x5EA6;</p>
+<blockquote>
+<p>IE&#x76D2;&#x6A21;&#x578B;(border-box)</p>
+</blockquote>
+<p>IE&#x76D2;&#x6A21;&#x578B;:</p>
+<pre><code>&#x76D2;&#x5B50;&#x7684;&#x5BBD;&#x5EA6; = &#x5185;&#x5BB9;&#x5BBD;&#x5EA6; + &#x5185;&#x8FB9;&#x8DDD;&#x5BBD;&#x5EA6;(padding) + &#x8FB9;&#x6846;&#x5BBD;&#x5EA6;(border) = 100
+
+&#x76D2;&#x5B50;&#x7684;&#x9AD8;&#x5EA6; = &#x5185;&#x5BB9;&#x9AD8;&#x5EA6; + &#x5185;&#x8FB9;&#x8DDD;&#x9AD8;&#x5EA6;(padding) + &#x8FB9;&#x6846;&#x9AD8;&#x5EA6;(border) = 100
+</code></pre><p>&#x5982;&#x56FE;&#x6240;&#x793A;:</p>
+<p><img src="images/&#x76D2;&#x6A21;&#x578B;2.png" alt="IE&#x76D2;&#x6A21;&#x578B;"></p>
+<p>&#x5185;&#x5BB9;&#x7684;&#x5BBD;&#x5EA6;&#x548C;&#x9AD8;&#x5EA6; = &#x5185;&#x5BB9; + &#x5185;&#x8FB9;&#x8DDD;(padding) + &#x8FB9;&#x6846;(border)</p>
+<p>&#x6CE8;&#x610F;:</p>
+<pre><code>&#x6211;&#x4EEC;&#x5728;&#x7F16;&#x5199;&#x9875;&#x9762;&#x4EE3;&#x7801;&#x65F6;&#x5E94;&#x5C3D;&#x91CF;&#x4F7F;&#x7528;&#x6807;&#x51C6;&#x7684;W3C&#x6A21;&#x578B;(&#x9700;&#x5728;&#x9875;&#x9762;&#x4E2D;&#x58F0;&#x660E;DOCTYPE&#x7C7B;&#x578B;)&#xFF0C;&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x907F;&#x514D;&#x591A;&#x4E2A;&#x6D4F;&#x89C8;&#x5668;&#x5BF9;&#x540C;&#x4E00;&#x9875;&#x9762;&#x7684;&#x4E0D;&#x517C;&#x5BB9;&#x3002;
+
+&#x56E0;&#x4E3A;&#x82E5;&#x4E0D;&#x58F0;&#x660E;DOCTYPE&#x7C7B;&#x578B;&#xFF0C;IE&#x6D4F;&#x89C8;&#x5668;&#x4F1A;&#x5C06;&#x76D2;&#x5B50;&#x6A21;&#x578B;&#x89E3;&#x91CA;&#x4E3A;IE&#x76D2;&#x5B50;&#x6A21;&#x578B;&#xFF0C;FireFox&#x7B49;&#x4F1A;&#x5C06;&#x5176;&#x89E3;&#x91CA;&#x4E3A;W3C&#x76D2;&#x5B50;&#x6A21;&#x578B;&#xFF1B;
+
+&#x82E5;&#x5728;&#x9875;&#x9762;&#x4E2D;&#x58F0;&#x660E;&#x4E86;DOCTYPE&#x7C7B;&#x578B;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x90FD;&#x4F1A;&#x628A;&#x76D2;&#x6A21;&#x578B;&#x89E3;&#x91CA;&#x4E3A;W3C&#x76D2;&#x6A21;&#x578B;&#x3002;
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="块级格式化上下文.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 块级格式化上下文">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"CSS的盒模型","level":"4.1.1","depth":2,"next":{"title":"块级格式化上下文","level":"4.1.2","depth":2,"path":"前端/CSS/块级格式化上下文.md","ref":"前端/CSS/块级格式化上下文.md","articles":[]},"previous":{"title":"CSS","level":"4.1","depth":1,"ref":"","articles":[{"title":"CSS的盒模型","level":"4.1.1","depth":2,"path":"前端/CSS/CSS的盒模型.md","ref":"前端/CSS/CSS的盒模型.md","articles":[]},{"title":"块级格式化上下文","level":"4.1.2","depth":2,"path":"前端/CSS/块级格式化上下文.md","ref":"前端/CSS/块级格式化上下文.md","articles":[]},{"title":"重绘和回流","level":"4.1.3","depth":2,"path":"前端/CSS/重绘和回流.md","ref":"前端/CSS/重绘和回流.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"前端/CSS/CSS的盒模型.md","mtime":"2019-09-06T07:27:06.079Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-10T04:49:22.501Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
